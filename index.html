@@ -2,25 +2,31 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jonathan Ramírez | Front-End Developer</title>
-    <link rel="stylesheet" href="css/style.css"/>
-</head>
-  <body> 
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header class="header">
-      <a href="/index.html" class="logo">JR<span>.</span></a>
-      <nav class="nav">
+      <a href="index.html" class="logo">JR<span>.</span></a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
         <ul class="nav-list">
           <li><a href="#inicio">Home</a></li>
-          <!-- <li><a href="#proyectos">Proyectos</a></li> -->
+          <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="mailto:jonathanrott.dev@gmail.com">Correo</a></li>
           <li><a href="https://www.linkedin.com/in/jonathan-ramírez-2b0043246/" target="_blank">LinkedIn</a></li>
           <li><a href="https://github.com/jonnschenk" target="_blank">Github</a></li>
         </ul>
       </nav>
 
-      <a href="archivos/cv.pdf" download="Jonathan_Ramirez_CV.pdf" class="btn btn-dark">Descargar CV</a>
-    
+      <a href="archivos/Jonatha-Dev.pdf" download="Jonathan_Ramirez.pdf" class="btn btn-dark">Descargar CV</a>
     </header>
 
     <main>
@@ -55,7 +61,7 @@
   </div>-->
 
   <img src="https://images.unsplash.com/vector-1749322324151-06d64f1580fd?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="hero-photo" />
-  
+
   <img src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Retrato de Jonathan Ramírez" class="code-card" />
 
   <img src="images/jon.jpeg" alt="Retrato de Jonathan Ramírez" class="selfie" />
@@ -86,11 +92,13 @@
 
         <div class="projects-grid">
           <article class="project-card">
-            <figure class="project-image">
-              <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=1012&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Proyecto ALCOBA" />
-            </figure>
-            <h3>ALCOBA</h3>
-            <p>E-commerce editorial</p>
+            <a href="pages/proyecto-alcoba.html">
+              <figure class="project-image">
+                <img src="images/alcoba.jpg" alt="Página de inicio del proyecto ALCOBA" />
+              </figure>
+              <h3>ALCOBA</h3>
+              <p>E-commerce editorial</p>
+            </a>
             <div class="tech-list">
               <span>HTML</span>
               <span>CSS</span>
@@ -100,7 +108,7 @@
 
           <article class="project-card">
             <figure class="project-image">
-            <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=2372&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Portafolio personal" />
+              <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=2372&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Portafolio personal" />
             </figure>
             <h3>Portafolio Personal</h3>
             <p>Sitio web personal</p>
@@ -156,7 +164,8 @@
           </article>
         </div>
       </section>
-<section class="tools section-card">
+
+      <section id="tecnologias" class="tools section-card">
         <div class="section-heading">
           <span>Tecnologías</span>
           <h2>Herramientas que uso y estoy aprendiendo.</h2>
@@ -189,16 +198,16 @@
           </article>
         </div>
       </section>
+
       <section id="contacto" class="contact section-card">
         <div>
           <span>¿Hablemos?</span>
           <h2>Estoy abierto a oportunidades, colaboraciones y proyectos.</h2>
-          <!-- <a href="mailto:jonathan.ramirez.dev@gmail.com" class="btn btn-dark">Contáctame</a> -->
         </div>
 
         <ul class="contact-list">
           <li>
-            <a href="mailto:jonathan.ramirez.dev@gmail.com">
+            <a href="mailto:jonathanrott.dev@gmail.com">
               jonathanrott.dev@gmail.com
             </a>
           </li>
@@ -208,8 +217,8 @@
             </a>
           </li>
           <li>
-            <a href="https://linkedin.com/in/jonathan-ramirez-dev" target="_blank">
-              linkedin.com/in/jonathan-ramirez-dev
+            <a href="https://www.linkedin.com/in/jonathan-ramírez-2b0043246/" target="_blank">
+              linkedin.com/in/jonathan-ramírez
             </a>
           </li>
         </ul>
@@ -220,5 +229,7 @@
       <p>© 2026 Jonathan Ramírez.</p>
       <p>Portafolio</p>
     </footer>
+
+    <script src="js/nav.js"></script>
   </body>
 </html>
