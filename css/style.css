@@ -667,6 +667,13 @@ ul {
   height: auto;
 }
 
+.device-frame--plain {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
 .device-frame__bar {
   display: flex;
   gap: 0.6rem;
