@@ -1,50 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mí- JR</title>
+    <title>Sobre mí - JR</title>
     <link rel="stylesheet" href="../css/about.css"/>
 </head>
 <body class="about-page">
      <header class="header">
-      <a href="#" class="logo">JR<span>.</span></a>
-      <nav class="nav">
+      <a href="../index.html" class="logo">JR<span>.</span></a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
         <ul class="nav-list">
           <li><a href="../index.html">Home</a></li>
-          <!-- <li><a href="#proyectos">Proyectos</a></li> -->
           <li><a href="mailto:jonathanrott.dev@gmail.com">Correo</a></li>
           <li><a href="https://www.linkedin.com/in/jonathan-ramírez-2b0043246/" target="_blank">LinkedIn</a></li>
           <li><a href="https://github.com/jonnschenk" target="_blank">Github</a></li>
         </ul>
       </nav>
-      <a href="archivos/cv.pdf" download="Jonathan_Ramirez_CV.pdf" class="btn btn-dark">Descargar CV</a>
+      <a href="../archivos/Jonatha-Dev.pdf" download="Jonathan_Ramirez_CV.pdf" class="btn btn-dark">Descargar CV</a>
     </header>
-    <main>
-      <section class="hero">
+
+    <main class="about-detail">
+
+      <section class="hero about-hero">
         <div class="hero-content">
           <span class="tag">Sobre mí</span>
-          <h2>Biología que inspira, código que construye</h2>
+          <h1>Biología que inspira, <span>código que construye</span></h1>
           <p>
-            Soy biólogo de formación y desarrollador front-end en formación. Combino mi pasión por la biología con mi interés en la tecnología para crear soluciones digitales innovadoras. Mi enfoque se centra en la creación de interfaces web limpias, funcionales y accesibles, utilizando mis habilidades analíticas y creativas para construir experiencias digitales impactantes.
+            Soy biólogo de formación y desarrollador front-end en formación. Combino mi pasión por la biología
+            con mi interés en la tecnología para crear soluciones digitales innovadoras. Mi enfoque se centra en
+            interfaces web limpias, funcionales y accesibles, utilizando mis habilidades analíticas y creativas
+            para construir experiencias digitales impactantes.
           </p>
-        <span>Sobre mí</span>
-        <h2>Biología que inspira, código que construye</h2>
-      <div class="hero-image">
-        <img src="../images/jon.jpeg" alt="Retrato de Jonathan Ramírez">
-      </div>
+          <div class="hero-actions">
+            <a href="../archivos/Jonatha-Dev.pdf" download="Jonathan_Ramirez_CV.pdf" class="btn btn-dark">Descargar CV</a>
+            <a href="mailto:jonathanrott.dev@gmail.com" class="btn btn-light">Escríbeme</a>
+          </div>
+        </div>
+
+        <div class="about-hero-image">
+          <img src="../images/jon.jpeg" alt="Retrato de Jonathan Ramírez">
+        </div>
       </section>
-      <section class="trayectoria">
-        <h2>Mi trayectoria</h2>
-        <p>
-          Soy biólogo por formación y apasionado por entender los sistemas vivos. Durante mi carrera desarrollé habilidades para investigar, analizar información compleja y comunicar resultados de manera clata.
-        </p>
-        <p>
-          Esa misma curiosidad me llevó al desarrollo web, donde encontré la oportunidad de unir lógica, diseño y tecnologia para crear soluciones digitales que generen impacto.
-        </p>
-        <p>
-          Hoy estoy construyendo mi camino como desarrollador front-end aprendiendo cada dia y trabajando en proyectos que me permitan seguir creciendo.
-        </p>
+
+      <section class="trayectoria section-card">
+        <div class="section-heading">
+          <span class="eyebrow">Mi camino</span>
+          <h2>De la biología al desarrollo web.</h2>
+        </div>
+
+        <div class="trayectoria-grid">
+          <p>
+            Soy biólogo por formación y apasionado por entender los sistemas vivos. Durante mi carrera desarrollé
+            habilidades para investigar, analizar información compleja y comunicar resultados de manera clara.
+          </p>
+          <p>
+            Esa misma curiosidad me llevó al desarrollo web, donde encontré la oportunidad de unir lógica,
+            diseño y tecnología para crear soluciones digitales que generen impacto.
+          </p>
+          <p>
+            Hoy estoy construyendo mi camino como desarrollador front-end, aprendiendo cada día y trabajando en
+            proyectos que me permiten seguir creciendo.
+          </p>
+        </div>
+      </section>
+
+      <section class="formacion section-card">
+        <div class="section-heading">
+          <span class="eyebrow">Formación</span>
+          <h2>Estudios y certificaciones.</h2>
+        </div>
+
+        <ul class="timeline">
+          <li class="timeline-item">
+            <span class="timeline-date">Junio 2026 — Actualidad</span>
+            <div class="timeline-body">
+              <h3>Profesión, Front-End</h3>
+              <p>Escuela Británica de Artes Creativas y Tecnología (EBAC)</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-date">Mayo 2026 — Julio 2026</span>
+            <div class="timeline-body">
+              <h3>Desarrollo Web</h3>
+              <p>Coderhouse</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-date">Agosto 2021 — Agosto 2026</span>
+            <div class="timeline-body">
+              <h3>Licenciatura, Biología</h3>
+              <p>Escuela Nacional de Ciencias Biológicas (IPN)</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-date">Agosto 2018 — Julio 2021</span>
+            <div class="timeline-body">
+              <h3>Técnico, Manufactura Asistida por Computadora</h3>
+              <p>CECyT No. 3 Estanislao Ramírez Ruiz (IPN)</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="experiencia section-card">
+        <div class="section-heading">
+          <span class="eyebrow">Experiencia</span>
+          <h2>Dónde he aplicado lo que sé.</h2>
+        </div>
+
+        <div class="experiencia-grid">
+          <article class="experiencia-card">
+            <span class="timeline-date">Abril 2026 — Actualidad</span>
+            <h3>Digitalización y Gestión de Datos</h3>
+            <p class="experiencia-org">Instituto Politécnico Nacional (IPN)</p>
+            <ul class="approach-list">
+              <li>Desarrollo y mantenimiento de una base de datos para la organización y consulta de información científica.</li>
+              <li>Edición y optimización de imágenes con Adobe Photoshop para preservar la calidad del material digital.</li>
+              <li>Digitalización de colecciones biológicas.</li>
+            </ul>
+          </article>
+
+          <article class="experiencia-card">
+            <span class="timeline-date">Julio 2023 — Actualidad</span>
+            <h3>Sales Advisor</h3>
+            <p class="experiencia-org">COS</p>
+            <ul class="approach-list">
+              <li>Atención personalizada en un entorno de servicio premium.</li>
+              <li>Resolución de problemas y manejo de necesidades del cliente.</li>
+              <li>Colaboración con equipos multidisciplinarios para alcanzar objetivos comerciales.</li>
+              <li>Organización y priorización de tareas en un entorno dinámico.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="stack section-card">
+        <div class="section-heading">
+          <span class="eyebrow">Stack tecnológico</span>
+          <h2>Herramientas que uso y estoy aprendiendo.</h2>
+        </div>
+
+        <div class="stack-columns">
+          <div class="stack-column">
+            <h3>Front-End</h3>
+            <ul class="stack-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Diseño Responsive</li>
+            </ul>
+          </div>
+          <div class="stack-column">
+            <h3>Herramientas</h3>
+            <ul class="stack-list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>VS Code</li>
+            </ul>
+          </div>
+          <div class="stack-column">
+            <h3>Aprendiendo</h3>
+            <ul class="stack-list">
+              <li>React</li>
+              <li>Consumo de APIs REST (fetch)</li>
+              <li>Programación orientada a componentes</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-cta section-card">
+        <div>
+          <span class="eyebrow">¿Hablemos?</span>
+          <h2>Estoy abierto a oportunidades, colaboraciones y proyectos.</h2>
+        </div>
+        <div class="about-cta-actions">
+          <a href="mailto:jonathanrott.dev@gmail.com" class="btn btn-dark">Escríbeme</a>
+          <a href="proyectos.html" class="btn btn-light">Ver proyectos</a>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <p>© 2026 Jonathan Ramírez.</p>
+      <p>Portafolio</p>
+    </footer>
+
+    <script src="../js/nav.js"></script>
 </body>
 </html>
