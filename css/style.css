@@ -276,8 +276,12 @@ ul {
    HERO COLLAGE
    ========================================================= */
 
+.hero-photo,
 .selfie,
+.botanical-card,
 .forest-card,
+.code-card,
+.note-card,
 .palette-card {
   position: absolute;
   box-shadow: var(--shadow);
@@ -299,7 +303,11 @@ ul {
   }
 }
 
-/* Posiciones base para móvil: solo la foto real, como círculo centrado. */
+/* Posiciones base para móvil. */
+.hero-photo {
+  display: none;
+}
+
 .selfie {
   width: 260px;
   height: 260px;
@@ -311,7 +319,13 @@ ul {
   z-index: 5;
 }
 
+.code-card {
+  display: none;
+}
+
+.botanical-card,
 .forest-card,
+.note-card,
 .palette-card {
   display: none;
 }
@@ -1041,46 +1055,71 @@ ul {
   }
 
   .hero-collage {
-    min-height: 560px;
+    min-height: 620px;
   }
 
+  .hero-photo {
+    display: block;
+    width: 380px;
+    height: 260px;
+    right: 260px;
+    top: 40px;
+  }
+
+  .selfie {
+    width: 400px;
+    height: 400px;
+    left: auto;
+    margin-left: 0;
+    right: 100px;
+    top: 130px;
+  }
+
+  .code-card {
+    display: block;
+    width: 350px;
+    height: 250px;
+    top: 320px;
+    left: 15px;
+  }
+
+  .botanical-card,
   .forest-card,
   .palette-card {
     display: block;
   }
 
-  .forest-card {
-    width: 380px;
+  .botanical-card {
+    width: 210px;
     height: 320px;
-    left: 0;
-    top: 60px;
+    right: 0;
+    top: 5px;
     object-fit: cover;
-    border-radius: var(--radius-lg);
-    z-index: 2;
+    border-radius: 20px;
+    z-index: 1;
   }
 
-  .selfie {
-    width: 380px;
-    height: 380px;
-    left: auto;
-    margin-left: 0;
-    right: 20px;
-    top: 10px;
+  .forest-card {
+    width: 270px;
+    height: 145px;
+    right: 40px;
+    bottom: 10px;
+    object-fit: cover;
+    border-radius: 18px;
     z-index: 4;
   }
 
   .palette-card {
-    left: 20px;
-    top: 20px;
-    right: auto;
+    right: 45px;
+    bottom: 160px;
 
     display: flex;
     gap: 0.9rem;
 
     padding: 1.5rem 1.8rem;
-    border-radius: var(--radius-lg);
+    border-radius: 18px;
     background: var(--white);
-    z-index: 5;
+    z-index: 7;
   }
 
   .palette-card span {
@@ -1175,35 +1214,6 @@ ul {
    BREAKPOINT 2: ESCRITORIO
    CAMBIO: segundo min-width requerido por la actividad.
    ========================================================= */
-
-/* Ajuste puntual: entre 1024 y 1279px el área del collage se angosta
-   (columna de contenido fija a 440px + gap de 8rem), así que se reduce
-   la escala manteniendo la misma composición superpuesta. */
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .hero-collage {
-    min-height: 380px;
-  }
-
-  .forest-card {
-    width: 260px;
-    height: 220px;
-    left: 0;
-    top: 40px;
-  }
-
-  .selfie {
-    width: 260px;
-    height: 260px;
-    right: 0;
-    top: 0;
-  }
-
-  .palette-card {
-    left: 0;
-    top: auto;
-    bottom: 10px;
-  }
-}
 
 @media (min-width: 1024px) {
   .nav-list {
