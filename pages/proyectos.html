@@ -1,24 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos - JR</title>
-    <link rel="stylesheet" href="../css/style.css"/>
-</head>
-<body>
-     <header class="header">
-      <a href="#" class="logo">JR<span>.</span></a>
-      <nav class="nav">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos | Jonathan Ramírez</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html" class="logo">JR<span>.</span></a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
         <ul class="nav-list">
           <li><a href="../index.html">Home</a></li>
-          <!-- <li><a href="#proyectos">Proyectos</a></li> -->
-          <li><a href="mailto:jonathanrott.dev@gmail.com">Correo</a></li>
-          <li><a href="https://www.linkedin.com/in/jonathan-ramírez-2b0043246/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://github.com/jonnschenk" target="_blank">Github</a></li>
+          <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
+          <li><a href="about.html">Sobre mí</a></li>
         </ul>
       </nav>
-      <a href="archivos/cv.pdf" download="Jonathan_Ramirez_CV.pdf" class="btn btn-dark">Descargar CV</a>
+
+      <a href="../archivos/Jonatha-Dev.pdf" download="Jonathan_Ramirez.pdf" class="btn btn-dark">Descargar CV</a>
     </header>
-</body>
+
+    <main>
+      <section class="project-detail section-card">
+        <a href="../index.html#inicio" class="text-link back-link">← Volver al inicio</a>
+
+        <div class="section-heading">
+          <span>Proyectos</span>
+          <h2>Proyectos en los que he trabajado.</h2>
+        </div>
+
+        <div class="projects-grid projects-grid--featured">
+          <article class="project-card">
+            <a href="proyecto-alcoba.html">
+              <figure class="project-image">
+                <img src="../images/alcoba.jpg" alt="Página de inicio del proyecto ALCOBA" />
+              </figure>
+              <h3>ALCOBA</h3>
+              <p>E-commerce editorial · Diseño &amp; Front-End · 2026</p>
+            </a>
+            <div class="tech-list">
+              <span>HTML5</span>
+              <span>SCSS</span>
+              <span>Bootstrap 5</span>
+              <span>AOS</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Jonathan Ramírez.</p>
+      <p>Portafolio</p>
+      <div class="footer-links">
+        <a href="mailto:jonathanrott.dev@gmail.com">jonathanrott.dev@gmail.com</a>
+        <a href="https://github.com/jonnschenk" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/jonathan-ramírez-2b0043246/" target="_blank">LinkedIn</a>
+      </div>
+    </footer>
+
+    <script src="../js/nav.js"></script>
+  </body>
 </html>

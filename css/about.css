@@ -487,6 +487,20 @@ ul {
   font-size: 1.3rem;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.footer-links a {
+  color: #888;
+}
+
+.footer-links a:hover {
+  color: var(--black);
+}
+
 /* =========================================================
    BREAKPOINT 1: TABLET
    ========================================================= */
