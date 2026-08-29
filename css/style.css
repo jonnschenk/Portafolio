@@ -220,7 +220,7 @@ ul {
 .hero-collage {
   grid-area: collage;
   position: relative;
-  min-height: 460px;
+  min-height: 340px;
 }
 
 .tag {
@@ -305,34 +305,22 @@ ul {
 
 /* Posiciones base para móvil. */
 .hero-photo {
-  width: 260px;
-  height: 340px;
-  right: 30px;
-  top: 20px;
-  object-fit: cover;
-  border-radius: 28px;
-  z-index: 2;
+  display: none;
 }
 
 .selfie {
-  width: 330px;
-  height: 200px;
-  right: 0;
-  top: 170px;
+  width: 260px;
+  height: 260px;
+  left: 50%;
+  margin-left: -130px;
+  top: 30px;
   object-fit: cover;
   border-radius: 50%;
   z-index: 5;
 }
 
 .code-card {
-  width: 210px;
-  height: 250px;
-  left: 0;
-  top: 60px;
-  object-fit: cover;
-  border-radius: 20px;
-  background: #101010;
-  z-index: 3;
+  display: none;
 }
 
 .botanical-card,
@@ -1071,6 +1059,7 @@ ul {
   }
 
   .hero-photo {
+    display: block;
     width: 380px;
     height: 260px;
     right: 260px;
@@ -1080,11 +1069,14 @@ ul {
   .selfie {
     width: 400px;
     height: 400px;
+    left: auto;
+    margin-left: 0;
     right: 100px;
     top: 130px;
   }
 
   .code-card {
+    display: block;
     width: 350px;
     height: 250px;
     top: 320px;
