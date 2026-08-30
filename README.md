@@ -4,7 +4,7 @@ Portafolio personal de **Jonathan Ramírez**, diseñado y desarrollado de forma 
 
 🔗 Demo: [jonnschenk.github.io/Portafolio](https://jonnschenk.github.io/Portafolio/)
 
-## ✨ Características
+## 🐘 Características
 
 - Diseño responsive, propio y adaptado a mobile/desktop.
 - Navegación con menú hamburguesa para pantallas pequeñas.
