@@ -4,7 +4,7 @@ Portafolio personal de **Jonathan Ramírez**, diseñado y desarrollado de forma 
 
 🔗 Demo: [jonnschenk.github.io/Portafolio](https://jonnschenk.github.io/Portafolio/)
 
-## 🐘 Características
+## Características
 
 - Diseño responsive, propio y adaptado a mobile/desktop.
 - Navegación con menú hamburguesa para pantallas pequeñas.
@@ -14,14 +14,14 @@ Portafolio personal de **Jonathan Ramírez**, diseñado y desarrollado de forma 
 - Descarga directa de CV en PDF.
 - Enlaces de contacto (email, GitHub, LinkedIn).
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - **HTML5**
 - **CSS3** (diseño propio, sin frameworks en el sitio principal)
 - **JavaScript** (interacción del menú de navegación)
 - **SCSS**, **Bootstrap 5** y **AOS** (usados en el proyecto destacado ALCOBA)
 
-## 📂 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 Portafolio/
@@ -33,7 +33,7 @@ Portafolio/
 └── archivos/             # CV descargable (PDF)
 ```
 
-## 🚀 Cómo verlo localmente
+## Cómo verlo localmente
 
 1. Clona el repositorio:
    ```bash
@@ -41,7 +41,9 @@ Portafolio/
    ```
 2. Abre `index.html` en tu navegador (o usa una extensión tipo Live Server).
 
-## 📬 Contacto
+## Autor
+
+Jonathan M. Ramírez
 
 - Email: [jonathanrott.dev@gmail.com](mailto:jonathanrott.dev@gmail.com)
 - GitHub: [github.com/jonnschenk](https://github.com/jonnschenk)
