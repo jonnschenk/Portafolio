@@ -2,7 +2,7 @@
 
 Portafolio personal de **Jonathan Ramírez**, diseñado y desarrollado de forma íntegra (diseño UI/UX + front-end) para mostrar proyectos, habilidades y experiencia como desarrollador.
 
-🔗 Demo: [jonnschenk.github.io/Portafolio_JR](https://jonnschenk.github.io/Portafolio_JR/)
+🔗 Demo: [jonnschenk.github.io/Portafolio](https://jonnschenk.github.io/Portafolio/)
 
 ## ✨ Características
 
