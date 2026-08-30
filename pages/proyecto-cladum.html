@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cladum | Jonathan Ramírez</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html" class="logo">JR<span>.</span></a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="../index.html#inicio">Home</a></li>
+          <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
+          <li><a href="about.html">Sobre mí</a></li>
+        </ul>
+      </nav>
+
+      <a href="../archivos/Jonatha-Dev.pdf" download="Jonathan_Ramirez_CV.pdf" class="btn btn-dark">Descargar CV</a>
+    </header>
+
+    <main>
+      <section class="project-detail section-card">
+        <a href="proyectos.html" class="text-link back-link">← Volver a proyectos</a>
+
+        <div class="project-hero">
+          <div class="project-hero-content">
+            <div class="project-hero-badges">
+              <span class="tag">Explorador de biodiversidad</span>
+              <span class="status-badge status-badge--wip"><span aria-hidden="true">⚙</span>En desarrollo</span>
+            </div>
+            <h1>Cladum</h1>
+            <p>
+              Explorador de biodiversidad en JavaScript Vanilla moderno, pensado para consumir la
+              API pública de GBIF. Conecta mi formación en Biología con el desarrollo front-end: hoy
+              tiene la estructura, los filtros y el diseño listos — la búsqueda real de especies
+              todavía está en construcción.
+            </p>
+
+            <div class="project-actions">
+              <a href="https://jonnschenk.github.io/Cladum/" target="_blank" rel="noopener" class="btn btn-dark">Ver sitio ↗</a>
+              <a href="https://github.com/jonnschenk/Cladum" target="_blank" rel="noopener" class="btn btn-light">Ver código</a>
+            </div>
+
+            <dl class="project-meta">
+              <div>
+                <dt>Año</dt>
+                <dd>2026</dd>
+              </div>
+              <div>
+                <dt>Tipo</dt>
+                <dd>Web app · Biodiversidad</dd>
+              </div>
+              <div>
+                <dt>Progreso</dt>
+                <dd>Fase 1 de 6</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="device-stack">
+            <figure class="device-frame device-frame--wide">
+              <span class="device-frame__bar"><span></span><span></span><span></span></span>
+              <img src="../images/cladum.jpg" alt="Página de inicio del proyecto Cladum" />
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-features">
+          <article class="project-feature">
+            <span class="project-feature-index">01</span>
+            <h4>Estructura semántica responsive</h4>
+            <p>Header con buscador, panel de filtros (reino, grupo taxonómico, hábitat) y estados vacíos y de error ya maquetados.</p>
+          </article>
+
+          <article class="project-feature">
+            <span class="project-feature-index">02</span>
+            <h4>Arquitectura Sass modular</h4>
+            <p>Tokens, reset y tipografía en base/, header/grid/footer en layout/ y componentes (search-bar, card, filters, modal, skeleton, states) ya definidos.</p>
+          </article>
+
+          <article class="project-feature">
+            <span class="project-feature-index">03</span>
+            <h4>JS modular listo para conectar</h4>
+            <p>Carpetas services, state, ui y handlers ya definidas siguiendo una arquitectura por capas, a la espera de la integración real con la API.</p>
+          </article>
+        </div>
+
+        <div class="project-approach">
+          <div class="project-goal">
+            <div class="project-goal-text">
+              <span class="eyebrow">Objetivo</span>
+              <p>
+                Construir, fase por fase, un explorador de biodiversidad real: primero la estructura
+                visual, después la lógica de datos con la API de GBIF, y por último favoritos y
+                accesibilidad — todo en JavaScript Vanilla moderno, sin frameworks.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-approach-grid">
+            <div class="approach-card">
+              <span class="eyebrow">Mi rol</span>
+              <ul class="approach-list">
+                <li>Diseño de interfaz (paleta y tipografía editorial)</li>
+                <li>Maquetación HTML5 semántica</li>
+                <li>Arquitectura de estilos en Sass</li>
+                <li>Definición de la arquitectura JS modular</li>
+              </ul>
+            </div>
+
+            <div class="approach-card">
+              <span class="eyebrow">Proceso</span>
+              <ol class="approach-timeline">
+                <li><span>1</span>Estructura HTML + CSS base responsive</li>
+                <li class="is-current"><span>2</span>Arquitectura JS modular con datos mockeados (en curso)</li>
+                <li class="is-pending"><span>3</span>Integración real de la API de GBIF</li>
+                <li class="is-pending"><span>4</span>Favoritos con persistencia en localStorage</li>
+                <li class="is-pending"><span>5</span>Optimizaciones y accesibilidad</li>
+                <li class="is-pending"><span>6</span>Migración a React + TypeScript</li>
+              </ol>
+            </div>
+
+            <div class="approach-card">
+              <span class="eyebrow">Tecnologías</span>
+              <div class="tech-list tech-list--stack">
+                <span>HTML5</span>
+                <span>Sass</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-roadmap-detail">
+          <div class="roadmap-block">
+            <span class="eyebrow">Hecho</span>
+            <ul class="project-checklist">
+              <li><span>✓</span>Estructura HTML semántica y maquetación responsive (Fase 1)</li>
+              <li><span>✓</span>Estilos organizados en Sass (base, layout, components), ya compilados a CSS</li>
+              <li><span>✓</span>Arquitectura de carpetas definida para JS modular (services, state, ui, handlers)</li>
+            </ul>
+          </div>
+
+          <div class="roadmap-block">
+            <span class="eyebrow eyebrow--amber">En construcción</span>
+            <ul class="project-checklist project-checklist--wip">
+              <li><span>○</span>Arquitectura JS modular con datos mockeados (Fase 2)</li>
+              <li><span>○</span>Integración real con la API de GBIF (fetch, async/await, normalización)</li>
+              <li><span>○</span>Favoritos con persistencia en localStorage</li>
+              <li><span>○</span>Debounce, paginación y accesibilidad</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-stats">
+          <div>
+            <strong>1/6</strong>
+            <span>Fases completadas</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Responsive</span>
+          </div>
+          <div>
+            <strong>0</strong>
+            <span>Especies cargadas (aún)</span>
+          </div>
+        </div>
+
+        <div class="project-cta">
+          <div>
+            <h3>¿Te gusta este proyecto?</h3>
+            <p>Hablemos sobre nuevas oportunidades y colaboraciones.</p>
+          </div>
+          <a href="../index.html#contacto" class="btn btn-dark">Contacto →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Jonathan Ramírez.</p>
+      <p>Portafolio</p>
+      <div class="footer-links">
+        <a href="mailto:jonathanrott.dev@gmail.com">jonathanrott.dev@gmail.com</a>
+        <a href="https://github.com/jonnschenk" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/jonathan-ramírez-2b0043246/" target="_blank">LinkedIn</a>
+      </div>
+    </footer>
+
+    <script src="../js/nav.js"></script>
+  </body>
+</html>

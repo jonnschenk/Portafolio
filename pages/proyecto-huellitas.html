@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huellitas | Jonathan Ramírez</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html" class="logo">JR<span>.</span></a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="../index.html#inicio">Home</a></li>
+          <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
+          <li><a href="about.html">Sobre mí</a></li>
+        </ul>
+      </nav>
+
+      <a href="../archivos/Jonatha-Dev.pdf" download="Jonathan_Ramirez_CV.pdf" class="btn btn-dark">Descargar CV</a>
+    </header>
+
+    <main>
+      <section class="project-detail section-card">
+        <a href="proyectos.html" class="text-link back-link">← Volver a proyectos</a>
+
+        <div class="project-hero">
+          <div class="project-hero-content">
+            <div class="project-hero-badges">
+              <span class="tag">Ecommerce · Adopción canina</span>
+              <span class="status-badge status-badge--wip"><span aria-hidden="true">⚙</span>En desarrollo</span>
+            </div>
+            <h1>Huellitas</h1>
+            <p>
+              Proyecto final de curso: un ecommerce construido con HTML, CSS y conceptos de
+              interacción en el DOM, reinterpretado como un centro de adopción canina. Hoy tiene la
+              maquetación completa y responsive; para la entrega final todavía falta migrar a Sass,
+              aplicar BEM, sumar más JavaScript y reorganizar las carpetas.
+            </p>
+
+            <div class="project-actions">
+              <a href="https://jonnschenk.github.io/Huellitas/" target="_blank" rel="noopener" class="btn btn-dark">Ver sitio ↗</a>
+              <a href="https://github.com/jonnschenk/Huellitas" target="_blank" rel="noopener" class="btn btn-light">Ver código</a>
+            </div>
+
+            <dl class="project-meta">
+              <div>
+                <dt>Año</dt>
+                <dd>2026</dd>
+              </div>
+              <div>
+                <dt>Tipo</dt>
+                <dd>Ecommerce · Proyecto de curso</dd>
+              </div>
+              <div>
+                <dt>Progreso</dt>
+                <dd>Maquetación lista · falta la entrega final</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="device-stack">
+            <figure class="device-frame device-frame--wide">
+              <span class="device-frame__bar"><span></span><span></span><span></span></span>
+              <img src="../images/huellitas.jpg" alt="Página de inicio del proyecto Huellitas" />
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-features">
+          <article class="project-feature">
+            <span class="project-feature-index">01</span>
+            <h4>Estructura semántica completa</h4>
+            <p>Header/nav, hero, grid de perros destacados, proceso de adopción en 4 pasos, historias y CTA final, maquetados con las etiquetas adecuadas al contenido.</p>
+          </article>
+
+          <article class="project-feature">
+            <span class="project-feature-index">02</span>
+            <h4>Layout con Flexbox y Grid</h4>
+            <p>Sistema de grilla propio de 12 columnas para las secciones de perros, proceso e historias, sin usar floats en ningún punto.</p>
+          </article>
+
+          <article class="project-feature">
+            <span class="project-feature-index">03</span>
+            <h4>Responsive en 3 breakpoints</h4>
+            <p>Ajustes de layout en 900px, 768px y 600px, de escritorio a móvil.</p>
+          </article>
+        </div>
+
+        <div class="project-approach">
+          <div class="project-goal">
+            <div class="project-goal-text">
+              <span class="eyebrow">Objetivo (consigna del curso)</span>
+              <p>
+                Crear un ecommerce con HTML, CSS y conceptos de interacción en el DOM: HTML
+                semántico, layout con Flexbox y/o Grid (sin floats), metodología BEM, Sass como
+                preprocesador, diseño 100% responsive, mínimo 3 funcionalidades de JavaScript y una
+                estructura de carpetas ordenada.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-approach-grid">
+            <div class="approach-card">
+              <span class="eyebrow">Mi rol</span>
+              <ul class="approach-list">
+                <li>Diseño de la interfaz (tipografía editorial, paleta cálida)</li>
+                <li>Maquetación HTML5 semántica</li>
+                <li>Sistema de grilla propio con Flexbox y CSS Grid</li>
+                <li>Pendiente: arquitectura Sass + BEM + JS modular</li>
+              </ul>
+            </div>
+
+            <div class="approach-card">
+              <span class="eyebrow">Proceso</span>
+              <ol class="approach-timeline">
+                <li><span>1</span>HTML semántico + layout con Flexbox/Grid, sin floats</li>
+                <li><span>2</span>Diseño responsive en todos los breakpoints</li>
+                <li class="is-pending"><span>3</span>Metodología BEM en el naming de clases</li>
+                <li class="is-pending"><span>4</span>Migración de CSS a Sass</li>
+                <li class="is-current"><span>5</span>3 funcionalidades de JavaScript (hoy 1 de 3)</li>
+                <li class="is-pending"><span>6</span>Estructura de carpetas ordenada</li>
+              </ol>
+            </div>
+
+            <div class="approach-card">
+              <span class="eyebrow">Tecnologías</span>
+              <div class="tech-list tech-list--stack">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-roadmap-detail">
+          <div class="roadmap-block">
+            <span class="eyebrow">Hecho</span>
+            <ul class="project-checklist">
+              <li><span>✓</span>HTML5 semántico: header, nav, hero, secciones y footer con las etiquetas adecuadas al contenido</li>
+              <li><span>✓</span>Layout con Flexbox y CSS Grid (grilla propia de 12 columnas), sin usar floats</li>
+              <li><span>✓</span>Diseño 100% responsive en 3 breakpoints (900px, 768px, 600px)</li>
+              <li><span>✓</span>1 de 3 funcionalidades de JavaScript: efecto de header al hacer scroll</li>
+            </ul>
+          </div>
+
+          <div class="roadmap-block">
+            <span class="eyebrow eyebrow--amber">En construcción — entrega final</span>
+            <ul class="project-checklist project-checklist--wip">
+              <li><span>○</span>Migrar todo el CSS a Sass como preprocesador</li>
+              <li><span>○</span>Aplicar metodología BEM (hoy las clases son planas: dog‑card, col‑4)</li>
+              <li><span>○</span>Sumar 2 funcionalidades más de JavaScript con manipulación del DOM (ej. filtro de perros, ficha modal, favoritos)</li>
+              <li><span>○</span>Reorganizar la estructura de carpetas (separar scss/, js/ y assets/ como en mis otros proyectos)</li>
+              <li><span>○</span>Reemplazar las fotos placeholder por imágenes reales</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-stats">
+          <div>
+            <strong>3/7</strong>
+            <span>Requisitos del curso cumplidos</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Responsive</span>
+          </div>
+          <div>
+            <strong>1/3</strong>
+            <span>Funcionalidades JS</span>
+          </div>
+        </div>
+
+        <div class="project-cta">
+          <div>
+            <h3>¿Te gusta este proyecto?</h3>
+            <p>Hablemos sobre nuevas oportunidades y colaboraciones.</p>
+          </div>
+          <a href="../index.html#contacto" class="btn btn-dark">Contacto →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Jonathan Ramírez.</p>
+      <p>Portafolio</p>
+      <div class="footer-links">
+        <a href="mailto:jonathanrott.dev@gmail.com">jonathanrott.dev@gmail.com</a>
+        <a href="https://github.com/jonnschenk" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/jonathan-ramírez-2b0043246/" target="_blank">LinkedIn</a>
+      </div>
+    </footer>
+
+    <script src="../js/nav.js"></script>
+  </body>
+</html>

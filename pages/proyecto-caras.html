@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARAS | Jonathan Ramírez</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html" class="logo">JR<span>.</span></a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="../index.html#inicio">Home</a></li>
+          <li><a href="proyectos.html" aria-current="page">Proyectos</a></li>
+          <li><a href="about.html">Sobre mí</a></li>
+        </ul>
+      </nav>
+
+      <a href="../archivos/Jonatha-Dev.pdf" download="Jonathan_Ramirez_CV.pdf" class="btn btn-dark">Descargar CV</a>
+    </header>
+
+    <main>
+      <section class="project-detail section-card">
+        <a href="proyectos.html" class="text-link back-link">← Volver a proyectos</a>
+
+        <div class="project-hero">
+          <div class="project-hero-content">
+            <div class="project-hero-badges">
+              <span class="tag">Landing de newsletter</span>
+              <span class="status-badge status-badge--wip"><span aria-hidden="true">⚙</span>En desarrollo</span>
+            </div>
+            <h1>CARAS</h1>
+            <p>
+              Landing page de suscripción al newsletter de CARAS, con estilo editorial inspirado en
+              el formato de una revista. Proyecto académico construido en entregas incrementales:
+              cada fase se apoya en la anterior, sin rediseñar desde cero.
+            </p>
+
+            <div class="project-actions">
+              <a href="https://jonnschenk.github.io/CARAS/" target="_blank" rel="noopener" class="btn btn-dark">Ver sitio ↗</a>
+              <a href="https://github.com/jonnschenk/CARAS" target="_blank" rel="noopener" class="btn btn-light">Ver código</a>
+            </div>
+
+            <dl class="project-meta">
+              <div>
+                <dt>Año</dt>
+                <dd>2026</dd>
+              </div>
+              <div>
+                <dt>Tipo</dt>
+                <dd>Landing · Suscripción editorial</dd>
+              </div>
+              <div>
+                <dt>Progreso</dt>
+                <dd>Entrega 3 de 7</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="device-stack">
+            <figure class="device-frame device-frame--wide">
+              <span class="device-frame__bar"><span></span><span></span><span></span></span>
+              <img src="../images/caras.jpg" alt="Página de inicio del proyecto CARAS" />
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-features">
+          <article class="project-feature">
+            <span class="project-feature-index">01</span>
+            <h4>Estructura editorial responsive</h4>
+            <p>Header con navegación y menú hamburguesa resuelto solo con CSS, hero, formulario de suscripción, beneficios y testimonios simulados, maquetados con Grid y Flexbox.</p>
+          </article>
+
+          <article class="project-feature">
+            <span class="project-feature-index">02</span>
+            <h4>Arquitectura Sass modular</h4>
+            <p>Partials organizados en abstracts, base, layout y components, con variables, mixins y funciones propias mapeadas 1:1 a la identidad de marca.</p>
+          </article>
+
+          <article class="project-feature">
+            <span class="project-feature-index">03</span>
+            <h4>100% responsive</h4>
+            <p>Breakpoints en 860px y 600px, con el menú colapsable resuelto sin una sola línea de JavaScript.</p>
+          </article>
+        </div>
+
+        <div class="project-approach">
+          <div class="project-goal">
+            <div class="project-goal-text">
+              <span class="eyebrow">Objetivo</span>
+              <p>
+                Practicar un roadmap de siete entregas incrementales: cada fase suma una capa técnica
+                nueva (Sass, JavaScript, React + TypeScript, tests, accesibilidad, performance) sobre
+                el mismo diseño visual, sin rediseñar desde cero.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-approach-grid">
+            <div class="approach-card">
+              <span class="eyebrow">Mi rol</span>
+              <ul class="approach-list">
+                <li>Diseño de la identidad editorial (Playfair Display + Barlow, rojo #ED1E1E)</li>
+                <li>Maquetación HTML5 semántica</li>
+                <li>Arquitectura de estilos en Sass</li>
+                <li>Definición del roadmap técnico de 7 entregas</li>
+              </ul>
+            </div>
+
+            <div class="approach-card">
+              <span class="eyebrow">Proceso</span>
+              <ol class="approach-timeline">
+                <li><span>1</span>Estructura HTML + CSS base responsive</li>
+                <li><span>2</span>Refactor de estilos a Sass modular</li>
+                <li class="is-current"><span>3</span>Validación de formulario con JavaScript (en curso)</li>
+                <li class="is-pending"><span>4</span>Refactor a React + TypeScript</li>
+                <li class="is-pending"><span>5</span>Tests con Jest</li>
+                <li class="is-pending"><span>6</span>Accesibilidad WCAG</li>
+                <li class="is-pending"><span>7</span>SEO, performance y deploy</li>
+              </ol>
+            </div>
+
+            <div class="approach-card">
+              <span class="eyebrow">Tecnologías</span>
+              <div class="tech-list tech-list--stack">
+                <span>HTML5</span>
+                <span>Sass</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-roadmap-detail">
+          <div class="roadmap-block">
+            <span class="eyebrow">Hecho</span>
+            <ul class="project-checklist">
+              <li><span>✓</span>Estructura HTML semántica y CSS base responsive (header, hero, formulario, beneficios, testimonios), maquetada con Grid y Flexbox</li>
+              <li><span>✓</span>Formulario de suscripción (nombre y correo) y sección de testimonios simulados</li>
+              <li><span>✓</span>Refactor completo de CSS a Sass: partials en abstracts, base, layout y components</li>
+              <li><span>✓</span>Variables, mixins (respond-to()) y funciones propias mapeadas a la identidad de marca</li>
+            </ul>
+          </div>
+
+          <div class="roadmap-block">
+            <span class="eyebrow eyebrow--amber">En construcción</span>
+            <ul class="project-checklist project-checklist--wip">
+              <li><span>○</span>Validación del formulario con JavaScript vanilla (entrega activa)</li>
+              <li><span>○</span>Refactor a React + TypeScript</li>
+              <li><span>○</span>Tests con Jest</li>
+              <li><span>○</span>Accesibilidad WCAG (contraste, aria-label, labels enlazados)</li>
+              <li><span>○</span>SEO, performance (Lighthouse) y deploy final en Netlify</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-stats">
+          <div>
+            <strong>2/7</strong>
+            <span>Entregas completadas</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Responsive</span>
+          </div>
+          <div>
+            <strong>0</strong>
+            <span>Líneas de JS (por ahora)</span>
+          </div>
+        </div>
+
+        <div class="project-cta">
+          <div>
+            <h3>¿Te gusta este proyecto?</h3>
+            <p>Hablemos sobre nuevas oportunidades y colaboraciones.</p>
+          </div>
+          <a href="../index.html#contacto" class="btn btn-dark">Contacto →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Jonathan Ramírez.</p>
+      <p>Portafolio</p>
+      <div class="footer-links">
+        <a href="mailto:jonathanrott.dev@gmail.com">jonathanrott.dev@gmail.com</a>
+        <a href="https://github.com/jonnschenk" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/jonathan-ramírez-2b0043246/" target="_blank">LinkedIn</a>
+      </div>
+    </footer>
+
+    <script src="../js/nav.js"></script>
+  </body>
+</html>

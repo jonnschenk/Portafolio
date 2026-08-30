@@ -15,6 +15,7 @@
   --soft-gray: #f3f3f1;
   --border: #e9e9e5;
   --green: #5f7545;
+  --amber: #b8863b;
 
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
   --radius-xl: 32px;
@@ -206,6 +207,44 @@ ul {
   height: 0.7rem;
   border-radius: 50%;
   background: var(--green);
+}
+
+/* =========================================================
+   STATUS BADGE
+   Distinguible por color e ícono (no solo color).
+   ========================================================= */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 0.4rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.status-badge span {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.status-badge--done {
+  color: var(--green);
+  border-color: rgba(95, 117, 69, 0.3);
+  background: rgba(95, 117, 69, 0.08);
+}
+
+.status-badge--wip {
+  color: var(--amber);
+  border-color: rgba(184, 134, 59, 0.3);
+  background: rgba(184, 134, 59, 0.08);
 }
 
 /* =========================================================
