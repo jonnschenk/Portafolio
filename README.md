@@ -1,4 +1,4 @@
-# Portafolio JR
+# Portafolio
 
 Portafolio personal de **Jonathan Ramírez**, diseñado y desarrollado de forma íntegra (diseño UI/UX + front-end) para mostrar proyectos, habilidades y experiencia como desarrollador.
 
