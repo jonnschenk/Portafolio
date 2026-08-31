@@ -79,7 +79,8 @@ No edites los archivos en `css/` directamente — se sobrescriben en cada build.
    npm install
    npm run build:css
    ```
-3. Abre `index.html` en tu navegador (o usa una extensión tipo Live Server).
+3. Abre `index.html` en tu navegador (o usa una extensión tipo Live Server).+
+npm run watch:css 
 
 ## Autor
 
