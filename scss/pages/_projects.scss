@@ -1,0 +1,207 @@
+// Grid de proyectos: preview en index.html y listado completo en proyectos.html.
+@use "../mixins" as *;
+
+/* =========================================================
+   PROYECTOS
+   CAMBIO: Mobile First + áreas semánticas.
+   ========================================================= */
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "heading"
+    "cards";
+  gap: 4rem;
+  align-items: center;
+
+  @include desktop {
+    grid-template-columns: 270px 1fr;
+    grid-template-areas:
+      "heading cards";
+  }
+}
+
+.projects > .section-heading {
+  grid-area: heading;
+}
+
+.projects-grid {
+  grid-area: cards;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 2.2rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.project-card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.project-card > a {
+  display: block;
+  cursor: pointer;
+}
+
+.project-image {
+  margin: 0;
+  overflow: hidden;
+}
+
+.project-card img {
+  height: 170px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1.8rem 1.8rem 0;
+}
+
+.project-card-head h3 {
+  font-size: 1.7rem;
+  transition: color 0.25s ease;
+}
+
+.project-card:hover .project-card-head h3 {
+  color: var(--green);
+}
+
+.project-card p,
+.tech-list {
+  margin-inline: 1.8rem;
+}
+
+.project-card p {
+  color: var(--gray);
+  font-size: 1.4rem;
+}
+
+/* Mini-roadmap: qué está hecho vs. en construcción */
+
+.project-roadmap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  margin: 1.6rem 1.8rem 0;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--border);
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.roadmap-col h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.roadmap-col--done h4 {
+  color: var(--green);
+}
+
+.roadmap-col--wip h4 {
+  color: var(--amber);
+}
+
+.roadmap-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.roadmap-col li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  color: var(--gray);
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.roadmap-col li span {
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.roadmap-col--done li span {
+  color: var(--green);
+}
+
+.roadmap-col--wip li span {
+  color: var(--amber);
+}
+
+.project-roadmap--single {
+  grid-template-columns: 1fr;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin: 0.4rem 1.8rem 1.8rem;
+}
+
+.project-card-actions .text-link {
+  font-size: 1.3rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.tech-list span {
+  padding: 0.4rem 0.8rem;
+  border-radius: 7px;
+  background: var(--soft-gray);
+  font-size: 1.1rem;
+}
+
+.projects-grid.projects-grid--featured {
+  grid-template-columns: minmax(0, 380px);
+}
+
+.view-all-link {
+  display: inline-block;
+  margin-top: 2rem;
+}

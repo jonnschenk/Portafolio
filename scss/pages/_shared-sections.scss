@@ -1,0 +1,32 @@
+// .section-card / .section-heading: usados en index, proyectos.html y las páginas de detalle.
+@use "../mixins" as *;
+
+.section-card {
+  width: min(92%, 1240px);
+  margin: 0 auto 2.4rem;
+  padding: 3rem 2rem;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(233, 233, 229, 0.7);
+}
+
+.section-heading span,
+.about-content span,
+.contact span {
+  display: block;
+  margin-bottom: 1rem;
+
+  color: var(--green);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.section-heading h2,
+.about h2,
+.contact h2 {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}

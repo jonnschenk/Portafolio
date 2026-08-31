@@ -1,0 +1,60 @@
+// index.html: sección de tecnologías/herramientas.
+@use "../mixins" as *;
+
+/* =========================================================
+   TECNOLOGÍAS
+   CAMBIO: Mobile First + áreas.
+   ========================================================= */
+
+.tools {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "tools-heading"
+    "tools-list";
+  gap: 4rem;
+  align-items: center;
+
+  @include desktop {
+    grid-template-columns: 340px 1fr;
+    grid-template-areas:
+      "tools-heading tools-list";
+  }
+}
+
+.tools > .section-heading {
+  grid-area: tools-heading;
+}
+
+.tools-grid {
+  grid-area: tools-list;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+
+  @include tablet {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.tools-grid article {
+  min-height: 110px;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  border-radius: 18px;
+  background: var(--white);
+  font-weight: 700;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.05);
+}
+
+.tools-grid article img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}

@@ -17,7 +17,7 @@ Portafolio personal de **Jonathan Ramírez**, diseñado y desarrollado de forma 
 ## Tecnologías utilizadas
 
 - **HTML5**
-- **CSS3** (diseño propio, sin frameworks en el sitio principal)
+- **SCSS** compilado a CSS3 (diseño propio, sin frameworks en el sitio principal)
 - **JavaScript** (interacción del menú de navegación)
 - **SCSS**, **Bootstrap 5** y **AOS** (usados en el proyecto destacado ALCOBA)
 
@@ -27,11 +27,46 @@ Portafolio personal de **Jonathan Ramírez**, diseñado y desarrollado de forma 
 Portafolio/
 ├── index.html          # Página principal
 ├── pages/               # Páginas internas (about, proyectos, detalle de proyecto)
-├── css/                 # Estilos
+├── scss/                 # Fuente de los estilos, organizada por página (ver abajo)
+├── css/                 # CSS compilado (lo que consumen los .html, no se edita a mano)
 ├── js/                  # Scripts (navegación)
 ├── images/              # Recursos gráficos
 └── archivos/             # CV descargable (PDF)
 ```
+
+### Estilos (SCSS)
+
+Los estilos viven en `scss/` y se compilan a `css/`. Cada archivo compilado mantiene su
+nombre y ruta (`css/base.css`, `css/styles.css`, `css/about.css`), así que los `<link>` en
+los `.html` no cambian.
+
+```
+scss/
+├── _mixins.scss           # @include tablet { } / @include desktop { } (breakpoints 768px/1024px)
+├── base.scss              # -> css/base.css   (reset, variables, header/nav, botones, footer — global)
+├── about.scss              # -> css/about.css  (usado solo por pages/about.html)
+└── styles.scss             # -> css/styles.css (usado por index.html, proyectos.html y detalle de proyecto)
+    └── pages/
+        ├── _shared-sections.scss  (.section-card / .section-heading)
+        ├── _hero.scss              (hero + collage de index.html)
+        ├── _projects.scss          (grid de proyectos: preview en index + listado en proyectos.html)
+        ├── _about-teaser.scss      (teaser "Sobre mí" de index.html)
+        ├── _tools.scss             (sección tecnologías de index.html)
+        ├── _contact.scss           (sección contacto de index.html)
+        └── _project-detail.scss    (páginas proyecto-*.html)
+```
+
+Cada archivo de `pages/` incluye sus propios ajustes responsive junto a la regla base
+(usando los mixins `tablet`/`desktop`), en vez de agruparlos todos al final del archivo.
+
+Para editar estilos: modifica el `.scss` correspondiente y recompila con:
+
+```bash
+npm run build:css   # compila una vez
+npm run watch:css   # recompila automáticamente al guardar
+```
+
+No edites los archivos en `css/` directamente — se sobrescriben en cada build.
 
 ## Cómo verlo localmente
 
@@ -39,7 +74,12 @@ Portafolio/
    ```bash
    git clone https://github.com/jonnschenk/Portafolio_JR.git
    ```
-2. Abre `index.html` en tu navegador (o usa una extensión tipo Live Server).
+2. Instala las dependencias (necesarias solo para compilar SCSS):
+   ```bash
+   npm install
+   npm run build:css
+   ```
+3. Abre `index.html` en tu navegador (o usa una extensión tipo Live Server).
 
 ## Autor
 

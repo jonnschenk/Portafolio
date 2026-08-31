@@ -1,32 +1,67 @@
+@charset "UTF-8";
+.section-card {
+  width: min(92%, 1240px);
+  margin: 0 auto 2.4rem;
+  padding: 3rem 2rem;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(233, 233, 229, 0.7);
+}
+
+.section-heading span,
+.about-content span,
+.contact span {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--green);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.section-heading h2,
+.about h2,
+.contact h2 {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
 /* =========================================================
    HERO
    CAMBIO: Mobile First + grid-template-areas.
    ========================================================= */
-
 .hero {
   width: min(92%, 1240px);
   min-height: auto;
   margin: 4rem auto 8rem;
-
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas:
-    "content"
-    "collage";
-
+  grid-template-areas: "content" "collage";
   align-items: center;
   gap: 4rem;
+}
+@media (min-width: 768px) {
+  .hero {
+    min-height: 680px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 440px 1fr;
+    grid-template-areas: "content collage";
+    gap: 8rem;
+  }
 }
 
 .hero-content {
   grid-area: content;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 2.6rem;
-
-   opacity: 0;
+  opacity: 0;
   transform: translate(80px);
   animation: derecha 1s ease-out forwards;
 }
@@ -36,11 +71,21 @@
   position: relative;
   min-height: 340px;
 }
+@media (min-width: 768px) {
+  .hero-collage {
+    min-height: 620px;
+  }
+}
 
 .hero h1 {
   font-size: 5.2rem;
   line-height: 0.98;
   letter-spacing: -0.07em;
+}
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: clamp(5rem, 6vw, 7.2rem);
+  }
 }
 
 .hero h1 span {
@@ -59,15 +104,25 @@
   width: 100%;
   gap: 2rem;
 }
+@media (min-width: 768px) {
+  .hero-actions {
+    flex-direction: row;
+    width: auto;
+  }
+}
 
 .hero-actions .btn {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .hero-actions .btn {
+    width: auto;
+  }
 }
 
 /* =========================================================
    HERO COLLAGE
    ========================================================= */
-
 .hero-photo,
 .selfie,
 .botanical-card,
@@ -77,7 +132,6 @@
 .palette-card {
   position: absolute;
   box-shadow: var(--shadow);
-
   opacity: 0;
   transform: translateX(80px);
   animation: derecha 1s ease-out forwards;
@@ -88,16 +142,23 @@
     opacity: 0;
     transform: translateX(80px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
-
 /* Posiciones base para móvil. */
 .hero-photo {
   display: none;
+}
+@media (min-width: 768px) {
+  .hero-photo {
+    display: block;
+    width: 380px;
+    height: 260px;
+    right: 260px;
+    top: 40px;
+  }
 }
 
 .selfie {
@@ -110,9 +171,28 @@
   border-radius: 50%;
   z-index: 5;
 }
+@media (min-width: 768px) {
+  .selfie {
+    width: 400px;
+    height: 400px;
+    left: auto;
+    margin-left: 0;
+    right: 100px;
+    top: 130px;
+  }
+}
 
 .code-card {
   display: none;
+}
+@media (min-width: 768px) {
+  .code-card {
+    display: block;
+    width: 350px;
+    height: 250px;
+    top: 320px;
+    left: 15px;
+  }
 }
 
 .botanical-card,
@@ -122,53 +202,100 @@
   display: none;
 }
 
-/* =========================================================
-   SECCIONES GENERALES
-   ========================================================= */
-
-.section-card {
-  width: min(92%, 1240px);
-  margin: 0 auto 2.4rem;
-  padding: 3rem 2rem;
-  border-radius: var(--radius-xl);
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(233, 233, 229, 0.7);
+@media (min-width: 768px) {
+  .botanical-card,
+  .forest-card,
+  .palette-card {
+    display: block;
+  }
 }
 
-.section-heading span,
-.about-content span,
-.contact span {
-  display: block;
-  margin-bottom: 1rem;
-
-  color: var(--green);
-  font-size: 1.3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+@media (min-width: 768px) {
+  .botanical-card {
+    width: 210px;
+    height: 320px;
+    right: 0;
+    top: 5px;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 1;
+  }
 }
 
-.section-heading h2,
-.about h2,
-.contact h2 {
-  font-size: 3.2rem;
-  line-height: 1.15;
-  letter-spacing: -0.04em;
+@media (min-width: 768px) {
+  .forest-card {
+    width: 270px;
+    height: 145px;
+    right: 40px;
+    bottom: 10px;
+    object-fit: cover;
+    border-radius: 18px;
+    z-index: 4;
+  }
+}
+
+@media (min-width: 768px) {
+  .palette-card {
+    right: 45px;
+    bottom: 160px;
+    display: flex;
+    gap: 0.9rem;
+    padding: 1.5rem 1.8rem;
+    border-radius: 18px;
+    background: var(--white);
+    z-index: 7;
+  }
+}
+
+@media (min-width: 768px) {
+  .palette-card span {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #111;
+  }
+}
+
+@media (min-width: 768px) {
+  .palette-card span:nth-child(2) {
+    background: #5f7545;
+  }
+}
+
+@media (min-width: 768px) {
+  .palette-card span:nth-child(3) {
+    background: #9da98d;
+  }
+}
+
+@media (min-width: 768px) {
+  .palette-card span:nth-child(4) {
+    background: #d7d8d0;
+  }
+}
+
+@media (min-width: 768px) {
+  .palette-card span:nth-child(5) {
+    background: #edeae4;
+  }
 }
 
 /* =========================================================
    PROYECTOS
    CAMBIO: Mobile First + áreas semánticas.
    ========================================================= */
-
 .projects {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas:
-    "heading"
-    "cards";
+  grid-template-areas: "heading" "cards";
   gap: 4rem;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .projects {
+    grid-template-columns: 270px 1fr;
+    grid-template-areas: "heading cards";
+  }
 }
 
 .projects > .section-heading {
@@ -177,11 +304,20 @@
 
 .projects-grid {
   grid-area: cards;
-
   display: grid;
   grid-template-columns: 1fr;
   align-items: start;
   gap: 2.2rem;
+}
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .project-card {
@@ -189,15 +325,32 @@
   border-radius: 18px;
   background: var(--white);
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.project-card > a {
+  display: block;
+  cursor: pointer;
 }
 
 .project-image {
   margin: 0;
+  overflow: hidden;
 }
 
 .project-card img {
   height: 170px;
   object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
 }
 
 .project-card-head {
@@ -211,6 +364,11 @@
 
 .project-card-head h3 {
   font-size: 1.7rem;
+  transition: color 0.25s ease;
+}
+
+.project-card:hover .project-card-head h3 {
+  color: var(--green);
 }
 
 .project-card p,
@@ -224,7 +382,6 @@
 }
 
 /* Mini-roadmap: qué está hecho vs. en construcción */
-
 .project-roadmap {
   display: grid;
   grid-template-columns: 1fr;
@@ -232,6 +389,11 @@
   margin: 1.6rem 1.8rem 0;
   padding-top: 1.6rem;
   border-top: 1px solid var(--border);
+}
+@media (min-width: 768px) {
+  .project-roadmap {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .roadmap-col h4 {
@@ -281,6 +443,11 @@
 .project-roadmap--single {
   grid-template-columns: 1fr;
 }
+@media (min-width: 768px) {
+  .project-roadmap--single {
+    grid-template-columns: 1fr;
+  }
+}
 
 .project-card-actions {
   display: flex;
@@ -321,15 +488,19 @@
    SOBRE MÍ
    CAMBIO: Mobile First + grid-template-areas.
    ========================================================= */
-
 .about {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas:
-    "about-content"
-    "about-list";
+  grid-template-areas: "about-content" "about-list";
   gap: 4rem;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .about {
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-areas: "about-content about-list";
+    gap: 6rem;
+  }
 }
 
 .about-content {
@@ -338,7 +509,6 @@
 
 .about-list {
   grid-area: about-list;
-
   display: grid;
   gap: 2.6rem;
 }
@@ -372,15 +542,18 @@
    TECNOLOGÍAS
    CAMBIO: Mobile First + áreas.
    ========================================================= */
-
 .tools {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas:
-    "tools-heading"
-    "tools-list";
+  grid-template-areas: "tools-heading" "tools-list";
   gap: 4rem;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .tools {
+    grid-template-columns: 340px 1fr;
+    grid-template-areas: "tools-heading tools-list";
+  }
 }
 
 .tools > .section-heading {
@@ -389,10 +562,19 @@
 
 .tools-grid {
   grid-area: tools-list;
-
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.8rem;
+}
+@media (min-width: 768px) {
+  .tools-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .tools-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
 }
 
 .tools-grid article {
@@ -416,15 +598,19 @@
    CONTACTO
    CAMBIO: Mobile First + áreas.
    ========================================================= */
-
 .contact {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas:
-    "contact-text"
-    "contact-links";
+  grid-template-areas: "contact-text" "contact-links";
   gap: 4rem;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .contact {
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-areas: "contact-text contact-links";
+    gap: 6rem;
+  }
 }
 
 .contact > div {
@@ -433,7 +619,6 @@
 
 .contact-list {
   grid-area: contact-links;
-
   display: grid;
   gap: 1.6rem;
 }
@@ -451,7 +636,6 @@
    PÁGINA DE DETALLE DE PROYECTO
    CAMBIO: Mobile First.
    ========================================================= */
-
 .project-detail {
   display: flex;
   flex-direction: column;
@@ -467,12 +651,24 @@
   flex-direction: column;
   gap: 3rem;
 }
+@media (min-width: 1024px) {
+  .project-hero {
+    flex-direction: row;
+    align-items: center;
+    gap: 6rem;
+  }
+}
 
 .project-hero-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.6rem;
+}
+@media (min-width: 1024px) {
+  .project-hero-content {
+    flex: 0 0 42%;
+  }
 }
 
 .project-hero-badges {
@@ -486,6 +682,11 @@
   font-size: 3.6rem;
   line-height: 1.05;
   letter-spacing: -0.04em;
+}
+@media (min-width: 768px) {
+  .project-hero-content h1 {
+    font-size: 4.4rem;
+  }
 }
 
 .project-hero-content > p {
@@ -522,11 +723,20 @@
 }
 
 /* Mockups de dispositivos */
-
 .device-stack {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+}
+@media (min-width: 768px) {
+  .device-stack {
+    position: relative;
+  }
+}
+@media (min-width: 1024px) {
+  .device-stack {
+    flex: 1;
+  }
 }
 
 .device-frame {
@@ -566,13 +776,29 @@
 .device-frame--phone {
   display: none;
 }
+@media (min-width: 768px) {
+  .device-frame--phone {
+    display: block;
+    position: absolute;
+    width: 34%;
+    right: -6%;
+    bottom: -10%;
+    border: 4px solid var(--black);
+    background: var(--black);
+    z-index: 2;
+  }
+}
 
 /* Features numeradas */
-
 .project-features {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.6rem;
+}
+@media (min-width: 768px) {
+  .project-features {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .project-feature {
@@ -599,7 +825,6 @@
 }
 
 /* Objetivo / Rol / Proceso / Tecnologías */
-
 .eyebrow {
   display: block;
   margin-bottom: 1.2rem;
@@ -660,6 +885,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.6rem;
+}
+@media (min-width: 768px) {
+  .project-approach-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .approach-card {
@@ -744,11 +974,16 @@
 }
 
 /* Características + galería de colecciones */
-
 .project-split {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
+}
+@media (min-width: 768px) {
+  .project-split {
+    grid-template-columns: 1fr 1.4fr;
+    align-items: start;
+  }
 }
 
 .project-checklist-block h3 {
@@ -779,17 +1014,27 @@
 }
 
 /* Roadmap a escala de página de detalle (Hecho / En construcción) */
-
 .project-roadmap-detail {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
+}
+@media (min-width: 768px) {
+  .project-roadmap-detail {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
 }
 
 .project-gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.6rem;
+}
+@media (min-width: 768px) {
+  .project-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .project-gallery figure {
@@ -811,7 +1056,6 @@
 }
 
 /* Showcase secundario */
-
 .project-showcase {
   display: flex;
   flex-direction: column;
@@ -822,6 +1066,11 @@
 .device-frame--wide {
   width: 100%;
 }
+@media (min-width: 768px) {
+  .device-frame--wide {
+    width: 85%;
+  }
+}
 
 .project-showcase-caption {
   color: var(--gray);
@@ -830,7 +1079,6 @@
 }
 
 /* Resultados */
-
 .project-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -858,7 +1106,6 @@
 }
 
 /* CTA final */
-
 .project-cta {
   display: flex;
   flex-direction: column;
@@ -868,6 +1115,13 @@
   border-radius: var(--radius-lg);
   background: var(--soft-gray);
 }
+@media (min-width: 768px) {
+  .project-cta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 
 .project-cta h3 {
   margin-bottom: 0.6rem;
@@ -876,248 +1130,4 @@
 
 .project-cta p {
   color: var(--gray);
-}
-
-/* =========================================================
-   BREAKPOINT 1: TABLET
-   CAMBIO: min-width para estrategia Mobile First.
-   ========================================================= */
-
-@media (min-width: 768px) {
-  .hero {
-    min-height: 680px;
-  }
-
-  .hero h1 {
-    font-size: clamp(5rem, 6vw, 7.2rem);
-  }
-
-  .hero-actions {
-    flex-direction: row;
-    width: auto;
-  }
-
-  .hero-actions .btn {
-    width: auto;
-  }
-
-  .hero-collage {
-    min-height: 620px;
-  }
-
-  .hero-photo {
-    display: block;
-    width: 380px;
-    height: 260px;
-    right: 260px;
-    top: 40px;
-  }
-
-  .selfie {
-    width: 400px;
-    height: 400px;
-    left: auto;
-    margin-left: 0;
-    right: 100px;
-    top: 130px;
-  }
-
-  .code-card {
-    display: block;
-    width: 350px;
-    height: 250px;
-    top: 320px;
-    left: 15px;
-  }
-
-  .botanical-card,
-  .forest-card,
-  .palette-card {
-    display: block;
-  }
-
-  .botanical-card {
-    width: 210px;
-    height: 320px;
-    right: 0;
-    top: 5px;
-    object-fit: cover;
-    border-radius: 20px;
-    z-index: 1;
-  }
-
-  .forest-card {
-    width: 270px;
-    height: 145px;
-    right: 40px;
-    bottom: 10px;
-    object-fit: cover;
-    border-radius: 18px;
-    z-index: 4;
-  }
-
-  .palette-card {
-    right: 45px;
-    bottom: 160px;
-
-    display: flex;
-    gap: 0.9rem;
-
-    padding: 1.5rem 1.8rem;
-    border-radius: 18px;
-    background: var(--white);
-    z-index: 7;
-  }
-
-  .palette-card span {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    background: #111;
-  }
-
-  .palette-card span:nth-child(2) {
-    background: #5f7545;
-  }
-
-  .palette-card span:nth-child(3) {
-    background: #9da98d;
-  }
-
-  .palette-card span:nth-child(4) {
-    background: #d7d8d0;
-  }
-
-  .palette-card span:nth-child(5) {
-    background: #edeae4;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .project-roadmap {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .project-roadmap--single {
-    grid-template-columns: 1fr;
-  }
-
-  .tools-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .project-hero-content h1 {
-    font-size: 4.4rem;
-  }
-
-  .device-stack {
-    position: relative;
-  }
-
-  .device-frame--phone {
-    display: block;
-    position: absolute;
-    width: 34%;
-    right: -6%;
-    bottom: -10%;
-    border: 4px solid var(--black);
-    background: var(--black);
-    z-index: 2;
-  }
-
-  .project-features {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .project-approach-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .project-split {
-    grid-template-columns: 1fr 1.4fr;
-    align-items: start;
-  }
-
-  .project-roadmap-detail {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-  }
-
-  .project-gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .device-frame--wide {
-    width: 85%;
-  }
-
-  .project-cta {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-/* =========================================================
-   BREAKPOINT 2: ESCRITORIO
-   CAMBIO: segundo min-width requerido por la actividad.
-   ========================================================= */
-
-@media (min-width: 1024px) {
-  .hero {
-    grid-template-columns: 440px 1fr;
-    grid-template-areas:
-      "content collage";
-    gap: 8rem;
-  }
-
-  .projects {
-    grid-template-columns: 270px 1fr;
-    grid-template-areas:
-      "heading cards";
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .about {
-    grid-template-columns: 1fr 1.2fr;
-    grid-template-areas:
-      "about-content about-list";
-    gap: 6rem;
-  }
-
-  .tools {
-    grid-template-columns: 340px 1fr;
-    grid-template-areas:
-      "tools-heading tools-list";
-  }
-
-  .tools-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .contact {
-    grid-template-columns: 1fr 1.2fr;
-    grid-template-areas:
-      "contact-text contact-links";
-    gap: 6rem;
-  }
-
-  .project-hero {
-    flex-direction: row;
-    align-items: center;
-    gap: 6rem;
-  }
-
-  .project-hero-content {
-    flex: 0 0 42%;
-  }
-
-  .device-stack {
-    flex: 1;
-  }
 }

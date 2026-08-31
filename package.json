@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "sass scss/base.scss:css/base.css scss/styles.scss:css/styles.css scss/about.scss:css/about.css --no-source-map",
+    "watch:css": "sass --watch scss/base.scss:css/base.css scss/styles.scss:css/styles.css scss/about.scss:css/about.css --no-source-map"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/jonnschenk/Portafolio_JR/issues"
   },
-  "homepage": "https://github.com/jonnschenk/Portafolio_JR#readme"
+  "homepage": "https://github.com/jonnschenk/Portafolio_JR#readme",
+  "devDependencies": {
+    "sass": "^1.103.1"
+  }
 }

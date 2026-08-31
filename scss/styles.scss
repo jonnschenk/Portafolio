@@ -1,0 +1,9 @@
+// Entry point -> css/styles.css
+// Usado por: index.html, pages/proyectos.html, pages/proyecto-*.html
+@use "pages/shared-sections";
+@use "pages/hero";
+@use "pages/projects";
+@use "pages/about-teaser";
+@use "pages/tools";
+@use "pages/contact";
+@use "pages/project-detail";

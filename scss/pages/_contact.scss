@@ -1,0 +1,44 @@
+// index.html: sección de contacto.
+@use "../mixins" as *;
+
+/* =========================================================
+   CONTACTO
+   CAMBIO: Mobile First + áreas.
+   ========================================================= */
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "contact-text"
+    "contact-links";
+  gap: 4rem;
+  align-items: center;
+
+  @include desktop {
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-areas:
+      "contact-text contact-links";
+    gap: 6rem;
+  }
+}
+
+.contact > div {
+  grid-area: contact-text;
+}
+
+.contact-list {
+  grid-area: contact-links;
+
+  display: grid;
+  gap: 1.6rem;
+}
+
+.contact h2 {
+  max-width: 48rem;
+  margin-bottom: 2.4rem;
+}
+
+.contact-list a {
+  color: var(--gray);
+}

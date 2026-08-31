@@ -1,0 +1,60 @@
+// index.html: teaser "Sobre mí" (no confundir con about.html / about.css).
+@use "../mixins" as *;
+
+/* =========================================================
+   SOBRE MÍ
+   CAMBIO: Mobile First + grid-template-areas.
+   ========================================================= */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "about-content"
+    "about-list";
+  gap: 4rem;
+  align-items: center;
+
+  @include desktop {
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-areas:
+      "about-content about-list";
+    gap: 6rem;
+  }
+}
+
+.about-content {
+  grid-area: about-content;
+}
+
+.about-list {
+  grid-area: about-list;
+
+  display: grid;
+  gap: 2.6rem;
+}
+
+.about-content p {
+  max-width: 40rem;
+  margin: 2rem 0;
+  color: var(--gray);
+}
+
+.text-link {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.about-list article {
+  padding-left: 2.4rem;
+  border-left: 2px solid var(--border);
+}
+
+.about-list h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.about-list p {
+  color: var(--gray);
+}
