@@ -24,8 +24,20 @@
           <li><a href="about.html">Sobre mí</a></li>
         </ul>
       </nav>
-
-      <a href="../archivos/Jonathan-Dev.pdf" download="Jonathan_Ramirez_CV.pdf" class="btn btn-dark">Descargar CV</a>
+      <div class="header-icons">
+        <a href="mailto:jonathanrott.dev@gmail.com" class="header-icon-link" aria-label="Enviar correo a Jonathan Ramírez"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" aria-hidden="true" focusable="false"><path d="M8 12h2a1 1 0 0 0 0-2H8a1 1 0 0 0 0 2m9-6h-5V4h1a1 1 0 0 0 0-2h-2a1 1 0 0 0-1 1v3H7a4 4 0 0 0-4 4v6a1 1 0 0 0 1 1h6v4a1 1 0 0 0 2 0v-4h8a1 1 0 0 0 1-1v-6a4 4 0 0 0-4-4m-4 4v5H5v-5a2 2 0 0 1 2-2h6.56a3.9 3.9 0 0 0-.56 2m6 5h-4v-5a2 2 0 0 1 4 0Z"/></svg></a>
+        <a href="https://www.linkedin.com/in/jonathan-ram%C3%ADrez-2b0043246/" target="_blank" rel="noopener" class="header-icon-link" aria-label="Perfil de LinkedIn de Jonathan Ramírez"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="invisible_box" data-name="invisible box">
+              <rect width="40" height="40" fill="none"/>
+              <rect width="40" height="40" fill="none"/>
+            </g>
+            <g id="icons_Q2" data-name="icons Q2">
+              <path fill="currentColor" d="M41,4.1H7A2.9,2.9,0,0,0,4,7V41.1A2.9,2.9,0,0,0,7,44H41a2.9,2.9,0,0,0,2.9-2.9V7A2.9,2.9,0,0,0,41,4.1Zm-25.1,34h-6v-19h6Zm-3-21.6A3.5,3.5,0,0,1,9.5,13a3.4,3.4,0,0,1,6.8,0A3.5,3.5,0,0,1,12.9,16.5ZM38,38.1H32.1V28.8c0-2.2,0-5-3.1-5s-3.5,2.4-3.5,4.9v9.4H19.6v-19h5.6v2.6h.1a6.2,6.2,0,0,1,5.6-3.1c6,0,7.1,3.9,7.1,9.1Z"/>
+            </g>
+          </g>
+        </svg></a>
+      </div>
     </header>
 
     <main>
@@ -39,7 +51,7 @@
 
         <div class="projects-grid">
           <article class="project-card">
-            <a href="proyecto-alcoba.html">
+            <a href="proyecto-alcoba.html" class="project-card-link">
               <figure class="project-image">
                 <img src="../images/alcoba.jpg" alt="Página de inicio del proyecto ALCOBA" />
               </figure>
@@ -48,36 +60,31 @@
                 <span class="status-badge status-badge--done"><span aria-hidden="true">✓</span>Completado</span>
               </div>
               <p>Sitio editorial de indumentaria de invierno con e-commerce completo y funcional: carrito con persistencia en localStorage, filtrado de productos y búsqueda en vivo.</p>
-            </a>
 
-            <div class="project-roadmap project-roadmap--single">
-              <div class="roadmap-col roadmap-col--done">
-                <h4>Hecho</h4>
-                <ul>
-                  <li><span>✓</span>Carrito de compras funcional con persistencia en localStorage (agregar, eliminar, ajustar cantidades y cálculo de subtotal)</li>
-                  <li><span>✓</span>Filtrado de productos por categoría, color y talla, con búsqueda en vivo y ordenamiento por precio</li>
-                  <li><span>✓</span>Overlay de búsqueda con manejo de foco y accesibilidad de teclado</li>
-                  <li><span>✓</span>Navegación responsive con Bootstrap 5</li>
-                </ul>
+              <div class="project-roadmap project-roadmap--single">
+                <div class="roadmap-col roadmap-col--done">
+                  <h4>Hecho</h4>
+                  <ul>
+                    <li><span>✓</span>Carrito de compras funcional con persistencia en localStorage (agregar, eliminar, ajustar cantidades y cálculo de subtotal)</li>
+                    <li><span>✓</span>Filtrado de productos por categoría, color y talla, con búsqueda en vivo y ordenamiento por precio</li>
+                    <li><span>✓</span>Overlay de búsqueda con manejo de foco y accesibilidad de teclado</li>
+                    <li><span>✓</span>Navegación responsive con Bootstrap 5</li>
+                  </ul>
+                </div>
               </div>
-            </div>
 
-            <div class="tech-list">
-              <span>HTML5</span>
-              <span>SCSS</span>
-              <span>Bootstrap 5</span>
-              <span>JavaScript</span>
-              <span>AOS</span>
-            </div>
-
-            <div class="project-card-actions">
-              <a href="https://jonnschenk.github.io/Alcoba/" target="_blank" rel="noopener" class="text-link">Ver sitio ↗</a>
-              <a href="https://github.com/jonnschenk/Alcoba" target="_blank" rel="noopener" class="text-link">Ver código</a>
-            </div>
+              <div class="tech-list">
+                <span>HTML5</span>
+                <span>SCSS</span>
+                <span>Bootstrap 5</span>
+                <span>JavaScript</span>
+                <span>AOS</span>
+              </div>
+            </a>
           </article>
 
           <article class="project-card">
-            <a href="proyecto-caras.html">
+            <a href="proyecto-caras.html" class="project-card-link">
               <figure class="project-image">
                 <img src="../images/caras.jpg" alt="Página de inicio del proyecto CARAS" />
               </figure>
@@ -86,40 +93,35 @@
                 <span class="status-badge status-badge--wip"><span aria-hidden="true">⚙</span>En desarrollo</span>
               </div>
               <p>Landing page de suscripción al newsletter de CARAS, con estilo editorial inspirado en revista, maquetada con HTML5 semántico y arquitectura Sass modular.</p>
+
+              <div class="project-roadmap">
+                <div class="roadmap-col roadmap-col--done">
+                  <h4>Hecho</h4>
+                  <ul>
+                    <li><span>✓</span>Estructura editorial responsive con Grid y Flexbox</li>
+                    <li><span>✓</span>Sistema de estilos escalable en Sass (abstracts, base, layout, components)</li>
+                  </ul>
+                </div>
+                <div class="roadmap-col roadmap-col--wip">
+                  <h4>En construcción</h4>
+                  <ul>
+                    <li><span>○</span>Validación de formularios con JavaScript vanilla</li>
+                    <li><span>○</span>Refactor a React + TypeScript</li>
+                    <li><span>○</span>Tests con Jest</li>
+                    <li><span>○</span>Accesibilidad (WCAG) y optimización SEO/performance</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tech-list">
+                <span>HTML5</span>
+                <span>Sass</span>
+              </div>
             </a>
-
-            <div class="project-roadmap">
-              <div class="roadmap-col roadmap-col--done">
-                <h4>Hecho</h4>
-                <ul>
-                  <li><span>✓</span>Estructura editorial responsive con Grid y Flexbox</li>
-                  <li><span>✓</span>Sistema de estilos escalable en Sass (abstracts, base, layout, components)</li>
-                </ul>
-              </div>
-              <div class="roadmap-col roadmap-col--wip">
-                <h4>En construcción</h4>
-                <ul>
-                  <li><span>○</span>Validación de formularios con JavaScript vanilla</li>
-                  <li><span>○</span>Refactor a React + TypeScript</li>
-                  <li><span>○</span>Tests con Jest</li>
-                  <li><span>○</span>Accesibilidad (WCAG) y optimización SEO/performance</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="tech-list">
-              <span>HTML5</span>
-              <span>Sass</span>
-            </div>
-
-            <div class="project-card-actions">
-              <a href="https://jonnschenk.github.io/CARAS/" target="_blank" rel="noopener" class="text-link">Ver sitio ↗</a>
-              <a href="https://github.com/jonnschenk/CARAS" target="_blank" rel="noopener" class="text-link">Ver código</a>
-            </div>
           </article>
 
           <article class="project-card">
-            <a href="proyecto-cladum.html">
+            <a href="proyecto-cladum.html" class="project-card-link">
               <figure class="project-image">
                 <img src="../images/cladum.jpg" alt="Página de inicio del proyecto Cladum" />
               </figure>
@@ -128,40 +130,35 @@
                 <span class="status-badge status-badge--wip"><span aria-hidden="true">⚙</span>En desarrollo</span>
               </div>
               <p>Explorador de biodiversidad que conecta mi formación en Biología con desarrollo front-end, pensado para consumir la API pública de GBIF.</p>
+
+              <div class="project-roadmap">
+                <div class="roadmap-col roadmap-col--done">
+                  <h4>Hecho</h4>
+                  <ul>
+                    <li><span>✓</span>Estructura HTML semántica y maquetación responsive (Fase 1)</li>
+                    <li><span>✓</span>Estilos organizados en Sass (base, layout, components)</li>
+                    <li><span>✓</span>Arquitectura de carpetas definida para JS modular (services, state, ui, handlers)</li>
+                  </ul>
+                </div>
+                <div class="roadmap-col roadmap-col--wip">
+                  <h4>En construcción</h4>
+                  <ul>
+                    <li><span>○</span>Integración real con la API de GBIF</li>
+                    <li><span>○</span>Favoritos con persistencia en localStorage</li>
+                    <li><span>○</span>Accesibilidad</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tech-list">
+                <span>HTML5</span>
+                <span>Sass</span>
+              </div>
             </a>
-
-            <div class="project-roadmap">
-              <div class="roadmap-col roadmap-col--done">
-                <h4>Hecho</h4>
-                <ul>
-                  <li><span>✓</span>Estructura HTML semántica y maquetación responsive (Fase 1)</li>
-                  <li><span>✓</span>Estilos organizados en Sass (base, layout, components)</li>
-                  <li><span>✓</span>Arquitectura de carpetas definida para JS modular (services, state, ui, handlers)</li>
-                </ul>
-              </div>
-              <div class="roadmap-col roadmap-col--wip">
-                <h4>En construcción</h4>
-                <ul>
-                  <li><span>○</span>Integración real con la API de GBIF</li>
-                  <li><span>○</span>Favoritos con persistencia en localStorage</li>
-                  <li><span>○</span>Accesibilidad</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="tech-list">
-              <span>HTML5</span>
-              <span>Sass</span>
-            </div>
-
-            <div class="project-card-actions">
-              <a href="https://jonnschenk.github.io/Cladum/" target="_blank" rel="noopener" class="text-link">Ver sitio ↗</a>
-              <a href="https://github.com/jonnschenk/Cladum" target="_blank" rel="noopener" class="text-link">Ver código</a>
-            </div>
           </article>
 
           <article class="project-card">
-            <a href="proyecto-huellitas.html">
+            <a href="proyecto-huellitas.html" class="project-card-link">
               <figure class="project-image">
                 <img src="../images/huellitas.jpg" alt="Página de inicio del proyecto Huellitas" />
               </figure>
@@ -170,38 +167,33 @@
                 <span class="status-badge status-badge--wip"><span aria-hidden="true">⚙</span>En desarrollo</span>
               </div>
               <p>Ecommerce de adopción canina para el proyecto final del curso. Hoy tiene la maquetación completa en HTML y CSS (Flexbox/Grid, responsive); para la entrega final falta migrar a Sass, aplicar BEM, sumar más JavaScript y reorganizar las carpetas.</p>
+
+              <div class="project-roadmap">
+                <div class="roadmap-col roadmap-col--done">
+                  <h4>Hecho</h4>
+                  <ul>
+                    <li><span>✓</span>HTML5 semántico: header, nav, secciones y footer con las etiquetas adecuadas</li>
+                    <li><span>✓</span>Layout con Flexbox y CSS Grid, sin floats</li>
+                    <li><span>✓</span>100% responsive en 3 breakpoints (900px, 768px, 600px)</li>
+                  </ul>
+                </div>
+                <div class="roadmap-col roadmap-col--wip">
+                  <h4>En construcción</h4>
+                  <ul>
+                    <li><span>○</span>Migrar el CSS a Sass</li>
+                    <li><span>○</span>Aplicar metodología BEM en las clases</li>
+                    <li><span>○</span>2 funcionalidades más de JS (hoy 1 de 3 mínimas)</li>
+                    <li><span>○</span>Reorganizar la estructura de carpetas</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tech-list">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+              </div>
             </a>
-
-            <div class="project-roadmap">
-              <div class="roadmap-col roadmap-col--done">
-                <h4>Hecho</h4>
-                <ul>
-                  <li><span>✓</span>HTML5 semántico: header, nav, secciones y footer con las etiquetas adecuadas</li>
-                  <li><span>✓</span>Layout con Flexbox y CSS Grid, sin floats</li>
-                  <li><span>✓</span>100% responsive en 3 breakpoints (900px, 768px, 600px)</li>
-                </ul>
-              </div>
-              <div class="roadmap-col roadmap-col--wip">
-                <h4>En construcción</h4>
-                <ul>
-                  <li><span>○</span>Migrar el CSS a Sass</li>
-                  <li><span>○</span>Aplicar metodología BEM en las clases</li>
-                  <li><span>○</span>2 funcionalidades más de JS (hoy 1 de 3 mínimas)</li>
-                  <li><span>○</span>Reorganizar la estructura de carpetas</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="tech-list">
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
-            </div>
-
-            <div class="project-card-actions">
-              <a href="https://jonnschenk.github.io/Huellitas/" target="_blank" rel="noopener" class="text-link">Ver sitio ↗</a>
-              <a href="https://github.com/jonnschenk/Huellitas" target="_blank" rel="noopener" class="text-link">Ver código</a>
-            </div>
           </article>
         </div>
       </section>

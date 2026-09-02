@@ -89,6 +89,37 @@ ul {
   color: var(--green);
 }
 
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  @include tablet {
+    gap: 1rem;
+  }
+}
+.header-icon-link {
+  display: flex;
+  color: var(--black);
+  transition: color 0.3s, transform 0.3s ease;
+
+  svg {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+
+    @include tablet {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}
+
+.header-icon-link:hover {
+  color: var(--green);
+  transform: translateY(-3px) scale(1.08);
+}
+
 .header > .btn {
   display: none;
 

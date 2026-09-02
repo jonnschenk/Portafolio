@@ -473,17 +473,6 @@
   }
 }
 
-.project-card-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.6rem;
-  margin: 0.4rem 1.8rem 1.8rem;
-}
-
-.project-card-actions .text-link {
-  font-size: 1.3rem;
-}
-
 .tech-list {
   display: flex;
   flex-wrap: wrap;
