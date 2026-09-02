@@ -61,6 +61,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -139,10 +140,12 @@ ul {
   border-radius: 999px;
   background: var(--white);
   cursor: pointer;
+  margin-left: auto;
 }
 @media (min-width: 768px) {
   .nav-toggle {
     display: none;
+    margin-left: 0;
   }
 }
 
